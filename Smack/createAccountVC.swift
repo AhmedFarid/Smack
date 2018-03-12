@@ -48,7 +48,7 @@ class createAccountVC: UIViewController {
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avaterName, avatarColor: self.avaterColor, complation: { (success) in
                             if success {
                                 print(UserDataService.instance.name, UserDataService.instance.avatarName)
-                                //self.performSegue(withIdentifier: UNWIND, sender: nil)
+                                self.performSegue(withIdentifier: UNWIND, sender: nil)
                             }
                         })
                     }

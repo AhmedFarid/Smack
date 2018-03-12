@@ -488,9 +488,11 @@
                         <outlet property="passwordTex" destination="lAH-bT-arY" id="Qtx-Ja-Z8j"/>
                         <outlet property="userImage" destination="XGc-ZV-zOx" id="NKN-hw-5NX"/>
                         <outlet property="userNameText" destination="5gu-yb-GVf" id="RXg-7Y-WQs"/>
+                        <segue destination="Vuz-o6-h5m" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="9tA-7D-8cE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWI-6V-Ux0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vuz-o6-h5m" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2522" y="-304"/>
         </scene>
