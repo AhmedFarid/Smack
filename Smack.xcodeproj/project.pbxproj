@@ -24,6 +24,8 @@
 		69F163712056E915000FE161 /* avatarPicerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F163702056E915000FE161 /* avatarPicerVC.swift */; };
 		69F163732056F184000FE161 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F163722056F184000FE161 /* AvatarCell.swift */; };
 		69F163752057270E000FE161 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F163742057270D000FE161 /* CircleImage.swift */; };
+		69F4DC7A2058259400690A73 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F4DC782058259400690A73 /* ProfileVC.swift */; };
+		69F4DC7B2058259400690A73 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F4DC792058259400690A73 /* ProfileVC.xib */; };
 		69F8CA142054B1B4008D36C9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F8CA132054B1B4008D36C9 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		69F163702056E915000FE161 /* avatarPicerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = avatarPicerVC.swift; sourceTree = "<group>"; };
 		69F163722056F184000FE161 /* AvatarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		69F163742057270D000FE161 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		69F4DC782058259400690A73 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		69F4DC792058259400690A73 /* ProfileVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		69F8CA132054B1B4008D36C9 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		76F724936E1EA4F6086C0AFF /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
 		987908AAD48C17B811EAB4C8 /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +108,7 @@
 		69277EF42052FFB4004C82DB /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				69F4DC7C2058289100690A73 /* XIBs */,
 				69F8CA122054B176008D36C9 /* Services */,
 				69277F15205360C1004C82DB /* Utillties */,
 				69277F0E20531877004C82DB /* Model */,
@@ -137,6 +142,7 @@
 				69277F1820536F95004C82DB /* signinVC.swift */,
 				690244A62055D00F006EEA40 /* createAccountVC.swift */,
 				69F163702056E915000FE161 /* avatarPicerVC.swift */,
+				69F4DC782058259400690A73 /* ProfileVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -165,6 +171,14 @@
 				69277F1620536139004C82DB /* Constants.swift */,
 			);
 			name = Utillties;
+			sourceTree = "<group>";
+		};
+		69F4DC7C2058289100690A73 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				69F4DC792058259400690A73 /* ProfileVC.xib */,
+			);
+			name = XIBs;
 			sourceTree = "<group>";
 		};
 		69F8CA122054B176008D36C9 /* Services */ = {
@@ -239,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69F4DC7B2058259400690A73 /* ProfileVC.xib in Resources */,
 				69277F002052FFB4004C82DB /* LaunchScreen.storyboard in Resources */,
 				69277EFD2052FFB4004C82DB /* Assets.xcassets in Resources */,
 				69277EFB2052FFB4004C82DB /* Main.storyboard in Resources */,
@@ -312,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69F4DC7A2058259400690A73 /* ProfileVC.swift in Sources */,
 				69277F122053199E004C82DB /* ChannelVC.swift in Sources */,
 				69277F102053194A004C82DB /* ChatVC.swift in Sources */,
 				69277F14205341DF004C82DB /* GradientView.swift in Sources */,
