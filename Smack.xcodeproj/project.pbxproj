@@ -21,6 +21,9 @@
 		69277F14205341DF004C82DB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69277F13205341DE004C82DB /* GradientView.swift */; };
 		69277F1720536139004C82DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69277F1620536139004C82DB /* Constants.swift */; };
 		69277F1920536F95004C82DB /* signinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69277F1820536F95004C82DB /* signinVC.swift */; };
+		69F163712056E915000FE161 /* avatarPicerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F163702056E915000FE161 /* avatarPicerVC.swift */; };
+		69F163732056F184000FE161 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F163722056F184000FE161 /* AvatarCell.swift */; };
+		69F163752057270E000FE161 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F163742057270D000FE161 /* CircleImage.swift */; };
 		69F8CA142054B1B4008D36C9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F8CA132054B1B4008D36C9 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,9 @@
 		69277F13205341DE004C82DB /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		69277F1620536139004C82DB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		69277F1820536F95004C82DB /* signinVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signinVC.swift; sourceTree = "<group>"; };
+		69F163702056E915000FE161 /* avatarPicerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = avatarPicerVC.swift; sourceTree = "<group>"; };
+		69F163722056F184000FE161 /* AvatarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		69F163742057270D000FE161 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		69F8CA132054B1B4008D36C9 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		76F724936E1EA4F6086C0AFF /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
 		987908AAD48C17B811EAB4C8 /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +136,7 @@
 				69277F112053199E004C82DB /* ChannelVC.swift */,
 				69277F1820536F95004C82DB /* signinVC.swift */,
 				690244A62055D00F006EEA40 /* createAccountVC.swift */,
+				69F163702056E915000FE161 /* avatarPicerVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -139,6 +146,8 @@
 			children = (
 				69277F13205341DE004C82DB /* GradientView.swift */,
 				690244A82055E5B1006EEA40 /* RoundedBTN.swift */,
+				69F163722056F184000FE161 /* AvatarCell.swift */,
+				69F163742057270D000FE161 /* CircleImage.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -306,12 +315,15 @@
 				69277F122053199E004C82DB /* ChannelVC.swift in Sources */,
 				69277F102053194A004C82DB /* ChatVC.swift in Sources */,
 				69277F14205341DF004C82DB /* GradientView.swift in Sources */,
+				69F163752057270E000FE161 /* CircleImage.swift in Sources */,
 				690244AB20560C95006EEA40 /* UserDataService.swift in Sources */,
 				69277EF62052FFB4004C82DB /* AppDelegate.swift in Sources */,
 				69277F0B205313BD004C82DB /* SWRevealViewController.m in Sources */,
 				69277F1720536139004C82DB /* Constants.swift in Sources */,
 				69277F1920536F95004C82DB /* signinVC.swift in Sources */,
 				690244A72055D00F006EEA40 /* createAccountVC.swift in Sources */,
+				69F163732056F184000FE161 /* AvatarCell.swift in Sources */,
+				69F163712056E915000FE161 /* avatarPicerVC.swift in Sources */,
 				690244A92055E5B1006EEA40 /* RoundedBTN.swift in Sources */,
 				69F8CA142054B1B4008D36C9 /* AuthService.swift in Sources */,
 			);
