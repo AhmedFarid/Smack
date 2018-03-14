@@ -142,7 +142,7 @@
                                 <rect key="frame" x="0.0" y="122" width="320" height="341"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ftl-7O-I1T">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="ftl-7O-I1T" customClass="channelCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ftl-7O-I1T" id="GDh-4g-sTg">
@@ -162,6 +162,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="channeName" destination="UW3-2j-mG0" id="TaK-8n-f2r"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -185,6 +188,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="channelTabble" destination="6og-qx-S7Z" id="nqL-49-Snj"/>
                         <outlet property="loginBtn" destination="dZf-a1-ilI" id="DB3-sW-ICz"/>
                         <outlet property="userImage" destination="5gc-GX-k0o" id="Utw-UM-mxM"/>
                         <segue destination="uM2-Pa-KMa" kind="show" identifier="toLogin" id="LAj-BM-Mbg"/>
@@ -285,6 +289,10 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="4BG-9k-mIx">
+                                <rect key="frame" x="142" y="205.5" width="37" height="37"/>
+                                <color key="color" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1K-r6-n60" customClass="RoundedBTN" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="35" y="286" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -301,6 +309,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginBTN:" destination="uM2-Pa-KMa" eventType="touchUpInside" id="TWm-of-Afo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -312,12 +323,19 @@
                             <constraint firstItem="VDP-VM-Et8" firstAttribute="top" secondItem="xXj-MI-9Ro" secondAttribute="bottom" constant="40" id="NeV-Mk-OeW"/>
                             <constraint firstItem="i1K-r6-n60" firstAttribute="centerX" secondItem="4zV-Nc-Mc6" secondAttribute="centerX" id="RHX-Y5-jra"/>
                             <constraint firstItem="VDP-VM-Et8" firstAttribute="centerX" secondItem="4zV-Nc-Mc6" secondAttribute="centerX" id="XYV-Xe-d2G"/>
+                            <constraint firstItem="4BG-9k-mIx" firstAttribute="centerY" secondItem="4zV-Nc-Mc6" secondAttribute="centerY" constant="-60" id="cex-Y7-mAI"/>
                             <constraint firstItem="xXj-MI-9Ro" firstAttribute="top" secondItem="DZ0-w8-b2M" secondAttribute="bottom" constant="60" id="h1y-hL-arW"/>
                             <constraint firstItem="S7T-eP-rZT" firstAttribute="trailing" secondItem="4zV-Nc-Mc6" secondAttribute="trailingMargin" id="ha4-e8-G7l"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S7T-eP-rZT" secondAttribute="trailing" id="mkm-P2-Ef8"/>
                             <constraint firstItem="S7T-eP-rZT" firstAttribute="top" secondItem="DZ0-w8-b2M" secondAttribute="bottom" constant="8" id="w7L-5V-3w2"/>
+                            <constraint firstItem="4BG-9k-mIx" firstAttribute="centerX" secondItem="4zV-Nc-Mc6" secondAttribute="centerX" id="wjh-zH-L3V"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTXT" destination="3kD-G2-XNb" id="7E4-3H-uvZ"/>
+                        <outlet property="spiner" destination="4BG-9k-mIx" id="97M-HA-Rh2"/>
+                        <outlet property="userNameTXT" destination="M5t-o5-YSD" id="rH2-0a-36q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kau-La-L8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
