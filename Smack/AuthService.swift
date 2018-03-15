@@ -110,7 +110,7 @@ class AuthService {
             "name": name,
             "email": lowerCaseEmail,
             "avatarName": avatarName,
-            "avaterColor": avatarColor
+            "avatarColor": avatarColor
         ]
         
                 

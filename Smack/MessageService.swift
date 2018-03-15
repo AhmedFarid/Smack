@@ -8,6 +8,7 @@ class MessageService {
     static let instance = MessageService()
     
     var channels = [Channel]()
+    var messages = [Message]()
     var selectedChannel : Channel?
     
     func findAllChannel(completion: @escaping CompletionHandler) {
@@ -39,10 +40,38 @@ class MessageService {
         channels.removeAll()
     }
     
+    func findAllMessageForChannel(channnelId: String,completion: @escaping CompletionHandler) {
+        Alamofire.request("\(URL_GET_MESSAGES)\(channnelId)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                self.clearMessages()
+                guard let data = response.data else { return }
+                if let json = JSON(data: data).array {
+                    for item in json {
+                        let messageBody = item["messageBody"].stringValue
+                        let channelId = item["channelId"].stringValue
+                        let id = item["_id"].stringValue
+                        let userName = item["userName"].stringValue
+                        let userAvater = item["userAvatar"].stringValue
+                        let userAvaterColor = item["userAvatarColor"].stringValue
+                        let timeStamp = item["timeStamp"].stringValue
+                        
+                        let message = Message(message: messageBody, userName: userName, channelId: channelId, userAvater: userAvater, userAvaterColor: userAvaterColor, id: id, timeStamp: timeStamp)
+                        
+                        self.messages.append(message)
+                        
+                    }
+                    print(self.messages)
+                    completion(true)
+                }
+            } else {
+                debugPrint(response.result.error as Any)
+                completion(false)
+            }
+        }
+    }
     
-    
-    
-    
-    
-    
+    func clearMessages(){
+        messages.removeAll()
+    }
 }
