@@ -1,11 +1,3 @@
-//
-//  AvatarCell.swift
-//  Smack
-//
-//  Created by FARIDO on 3/12/18.
-//  Copyright © 2018 FARIDO. All rights reserved.
-//
-
 import UIKit
 
 enum AvaterType {

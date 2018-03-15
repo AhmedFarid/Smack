@@ -1,8 +1,6 @@
 import Foundation
 
 
-
-
 typealias CompletionHandler = (_ Success: Bool) -> ()
 
 
@@ -21,6 +19,10 @@ let smackPurplePlaceholder = #colorLiteral(red: 0, green: 0.4784313725, blue: 1,
 
 // Notification Constants
 let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
+let NOTIF_CHANNELS_LOGDED = Notification.Name("channelsLoaded")
+let NOTIF_CHANNELS_SELECTED = Notification.Name("channelSelected")
+
+
 
 //Segues
 

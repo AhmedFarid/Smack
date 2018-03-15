@@ -10,7 +10,6 @@ class signinVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupView()
 
     }
@@ -53,13 +52,5 @@ class signinVC: UIViewController {
         userNameTXT.attributedPlaceholder = NSAttributedString(string: "User Name", attributes: [NSForegroundColorAttributeName: smackPurplePlaceholder])
         passwordTXT.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: smackPurplePlaceholder])
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(createAccountVC.handleTap))
-        view.addGestureRecognizer(tap)
-        
     }
-    
-    @objc func handleTap(){
-        view.endEditing(true)
-    }
-
 }

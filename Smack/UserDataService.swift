@@ -30,8 +30,8 @@ class UserDataService {
         self.avatarName = avaterName
     }
     
-    func returnUIColor(componets: String) -> UIColor {
-        let scanner = Scanner(string: componets)
+    func returnUIColor(components: String) -> UIColor {
+        let scanner = Scanner(string: components)
         let skipped = CharacterSet(charactersIn: "[], ")
         let comma = CharacterSet(charactersIn: ",")
         scanner.charactersToBeSkipped = skipped
@@ -45,10 +45,10 @@ class UserDataService {
         
         let defaultColor = UIColor.lightGray
         
-        guard let rUnwrapped = r else {return defaultColor}
-        guard let gUnwrapped = g else {return defaultColor}
-        guard let bUnwrapped = b else {return defaultColor}
-        guard let aUnwrapped = a else {return defaultColor}
+        guard let rUnwrapped = r else { return defaultColor }
+        guard let gUnwrapped = g else { return defaultColor }
+        guard let bUnwrapped = b else { return defaultColor }
+        guard let aUnwrapped = a else { return defaultColor }
         
         let rfloat = CGFloat(rUnwrapped.doubleValue)
         let gfloat = CGFloat(gUnwrapped.doubleValue)
@@ -58,9 +58,7 @@ class UserDataService {
         let newUIColor = UIColor(red: rfloat, green: gfloat, blue: bfloat, alpha: afloat)
         
         return newUIColor
-        
     }
-    
     
     func logoutUser() {
         id = ""
@@ -71,6 +69,8 @@ class UserDataService {
         AuthService.instance.isLoggedIn = false
         AuthService.instance.userEmail = ""
         AuthService.instance.authToken = ""
+        
+        MessageService.instance.clearChannels()
         
     }
     

@@ -18,8 +18,8 @@ class AddChannelVC: UIViewController {
     //Actions
     
     @IBAction func createChannelBTN(_ sender: Any) {
-        guard let channelName = userNameTXT.text , userNameTXT.text != "" else{return}
-        guard let description = descriptionTXT.text , descriptionTXT.text != "" else{return}
+        guard let channelName = userNameTXT.text , userNameTXT.text != "" else{ return }
+        guard let description = descriptionTXT.text else{ return }
         socketService.instance.addChannel(channelName: channelName, channelDescription: description) { (success) in
             if success {
                 self.dismiss(animated: true, completion: nil)
