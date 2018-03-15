@@ -93,6 +93,20 @@
                                     <action selector="sendBTn:" destination="g84-3H-OJB" eventType="touchUpInside" id="2ye-3t-qsE"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cKx-18-pXv">
+                                <rect key="frame" x="0.0" y="60" width="320" height="438"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="56" id="7CV-DC-l7n" customClass="messageCell" customModule="Smack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7CV-DC-l7n" id="fKN-Y4-v9t">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -100,10 +114,14 @@
                             <constraint firstItem="DsG-jr-4gS" firstAttribute="centerY" secondItem="Gu1-yE-y97" secondAttribute="centerY" id="AGz-Lq-oaK"/>
                             <constraint firstItem="Gu1-yE-y97" firstAttribute="leading" secondItem="cHv-jh-TDA" secondAttribute="leading" id="Ad2-vA-WfP"/>
                             <constraint firstItem="pzF-H5-IZF" firstAttribute="top" secondItem="Gu1-yE-y97" secondAttribute="bottom" id="Su0-us-wPg"/>
+                            <constraint firstItem="cKx-18-pXv" firstAttribute="leading" secondItem="cHv-jh-TDA" secondAttribute="leading" id="aMA-50-fzE"/>
                             <constraint firstItem="Fra-2d-Zvv" firstAttribute="top" secondItem="cHv-jh-TDA" secondAttribute="top" id="cgX-Tp-n4B"/>
+                            <constraint firstItem="Gu1-yE-y97" firstAttribute="top" secondItem="cKx-18-pXv" secondAttribute="bottom" constant="30" id="klE-qz-AYk"/>
                             <constraint firstAttribute="trailing" secondItem="DsG-jr-4gS" secondAttribute="trailing" constant="8" id="n0P-6b-3N4"/>
                             <constraint firstAttribute="trailing" secondItem="Gu1-yE-y97" secondAttribute="trailing" id="qBa-bo-ZJO"/>
+                            <constraint firstItem="cKx-18-pXv" firstAttribute="top" secondItem="Fra-2d-Zvv" secondAttribute="bottom" id="qCT-SV-kbP"/>
                             <constraint firstAttribute="trailing" secondItem="Fra-2d-Zvv" secondAttribute="trailing" id="rEZ-c5-i1h"/>
+                            <constraint firstAttribute="trailing" secondItem="cKx-18-pXv" secondAttribute="trailing" id="tbL-M9-Emn"/>
                         </constraints>
                     </view>
                     <connections>
